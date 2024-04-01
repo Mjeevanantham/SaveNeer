@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" type="image/x-icon"
+        href="https://img.icons8.com/external-goofy-color-kerismaker/96/external-Water-ecology-goofy-color-kerismaker.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="https://saveneer.site" class="logo"><img src="../asset/icon/logo.png" alt="Logo"></a>
+        <ul class="menu">
+            <li><a href="#news-container">Latest News</a></li>
+            <!-- <li><a href="#">HOME</a></li> -->
+            <li><a href="./quiz.html">Facts & Games</a></li>
+            <li><a href="../html/about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="video-cover">
+        <div id="video-holder" class="video stop">
+            <video id="video" width="720" height="405">
+                <source src="../asset/img/water_crisis_animate.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="bg"></div>
+            <div class="controls">
+                <div id="line" class="watch-line">
+                    <div id="watched-thumb" class="watched-thumb"></div>
+                    <div class="line-holder">
+                        <div class="line"></div>
+                        <div id="loaded-line" class="loaded-line"></div>
+                        <div id="hovered-line" class="hovered-line"></div>
+                        <div id="watched-line" class="watched-line"></div>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="actions">
+                        <div id="start-stop" class="start-stop option">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div id="volume" class="volume low option">
+                            <i id="mute-control" class="fa-solid fa-volume-high"></i>
+                            <div class="input">
+                                <input min="0" value="50" max="100" type="range" id="volume-level">
+                                <div class="unactive-area"></div>
+                                <div id="input-thumb" class="thumb"></div>
+                                <span id="input-area" class="active-area"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <!-- <div class="setting option">
+                <i class="fa-solid fa-gear"></i>
+              </div> -->
+                        <div id="screen-btn" class="full-screen option">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="https://static.tnn.in/thumb/msid-108032896,thumbsize-1335939,width-1280,height-720,resizemode-75/108032896.jpg"
+                    alt="Gallery image 1" class="gallery__img" loading="lazy">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="https://img.etimg.com/thumb/msid-69906494,width-650,height-488,imgsize-210333,resizemode-75/water-crisis-getty1.jpg"
+                    alt="Gallery image 2" class="gallery__img" loading="lazy">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="https://cdn.downtoearth.org.in/library/large/2018-03-22/0.57180200_1521721312_water-graph.jpg"
+                    alt="Gallery image 3" class="gallery__img" loading="lazy">
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img src="https://images.news18.com/ibnlive/uploads/2024/03/bengaluru-water-crisis-2024-03-989b8bc9f667c592262b2e6419cca218.png?impolicy=website&width=640&height=480"
+                    alt="Gallery image 4" class="gallery__img" loading="lazy">
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img src="https://genesiswatertech.com/wp-content/uploads/2023/08/Water-Availability-in-India-768x701.png"
+                    alt="Gallery image 5" class="gallery__img" loading="lazy">
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <img src="https://assets.telegraphindia.com/telegraph/2020/Nov/1604950397_shutterstock_1436341607.jpg"
+                    alt="Gallery image 6" class="gallery__img" loading="lazy">
+            </figure>
+        </div>
+        <!-- <div id="facts">
+            <h1>Facts about Water</h1>
+        </div> -->
+        <main id="news-container">
+            <div class="latest-news container-fluid">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row-title">
+                                Latest news from our blog
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <div class="main-btn-holder">
+                                <a href="#" class="hbtn hbtn-default">View more</a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="post-box blue-bg">
+                                <div class="post-img"></div>
+                                <span class="badge badge-danger">April 1</span>
+                                <span class="badge badge-danger">The Indian Express</span>
+                                <div class="post-title">A dry tale of India’s Silicon Valley: The water crisis in
+                                    Bengaluru</div>
+                                <div class="post-link"><a
+                                        href="https://indianexpress.com/article/cities/bangalore/bengaluru-water-crisis-dry-tale-of-indias-silicon-valley-9243361/">Learn
+                                        more</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="post-box grey-bg">
+                                <div class="post-img"></div>
+                                <span class="badge badge-info">The Economic Times</span>
+                                <span class="badge badge-info">Mar 29</span>
+                                <div class="post-title">Bengaluru IT companies, facing WFH demands, get a message on
+                                    water crisis
+                                </div>
+                                <div class="post-link"><a
+                                        href="https://economictimes.indiatimes.com/news/india/bengaluru-it-companies-facing-wfh-demands-get-a-message-on-water-crisis/articleshow/108873093.cms">Learn
+                                        more</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="post-box yellow-bg">
+                                <div class="post-img"></div>
+                                <span class="badge badge-dark">The Hindu</span>
+                                <span class="badge badge-dark">Mar 25</span>
+                                <div class="post-title">Coimbatore residents feel the heat of drinking water shortage
+                                </div>
+                                <div class="post-link"><a
+                                        href="https://www.thehindu.com/news/cities/Coimbatore/coimbatore-residents-feel-the-heat-of-drinking-water-shortage/article67991495.ece">Learn
+                                        more</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </main>
+        <button id="show-more-btn">Show More</button>
+    </div>
+
+
+
+    <script src="../js/home.js"></script>
+
+</body>
+
+</html>

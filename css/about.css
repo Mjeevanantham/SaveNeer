@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    /* margin: 0; */
 }
 
 body {
@@ -28,6 +29,30 @@ body {
     z-index: -1;
     /* Place the video behind other content */
     background-size: cover;
+}
+
+.home {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    text-align: center;
+    max-width: 90px;
+    height: 40px;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    border-radius: 25px;
+    color: black;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    background: rgb(133, 204, 204);
+    background: linear-gradient(90deg, rgba(133, 204, 204, 1) 0%, rgba(233, 148, 170, 1) 54%);
+    border: #ffffff solid 2px;
+}
+
+.home:hover {
+    border: none;
+    opacity: .7;
 }
 
 .card {
