@@ -1,3 +1,10 @@
+window.addEventListener('load', function() {
+  const loader = document.getElementById('loader');
+  // Hide loader when page is fully loaded
+  loader.style.display = 'none';
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
 

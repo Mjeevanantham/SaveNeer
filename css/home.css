@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
     height: 30px;
     backdrop-filter: blur(10px);
     padding: 50px 0;
-    position: sticky;
+    position: var(--size);
     width: 100%;
     top: 0;
     z-index: 999;
@@ -68,6 +68,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .nav-container {
@@ -122,10 +124,7 @@ body::-webkit-scrollbar-thumb {
     /* Blur effect */
 }
 
-/* Optional: Add box-shadow for more depth */
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 .container {
     width: 60%;
@@ -422,6 +421,7 @@ body::-webkit-scrollbar-thumb {
     animation: fade-out 0.2s 1s ease forwards;
     transition: opacity var(--trans);
 }
+
 
 .video.stop .bg,
 .video:hover .bg,
@@ -783,41 +783,131 @@ input[type="range"] {
     background-color: #2a74e3;
 }
 
-@media (max-width: 1200px) {
-    .latest-news .post-box .post-title {
-        max-width: 100%;
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .menu {
+        display: none;
+        /* Hide the menu items */
+    }
+
+    .menu.active {
+        display: flex;
+        /* Display the menu items when active */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        /* Adjust as needed */
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Adjust background color */
+        width: 100%;
+        z-index: 9999;
+        padding-right: 20px;
+    }
+
+    .menu.active li {
+        margin-right: 0;
+        /* Reset margin for menu items */
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+
+    }
+
+    .gallery {
+        display: flex;
+        /* grid-template-columns: 1fr; */
+    }
+
+    .gallery__item--1,
+    .gallery__item--4,
+    .gallery__item--5,
+    .gallery__item--2 {
+        display: none;
+    }
+
+    .gallery__item--3,
+    .gallery__item--6 {
+        grid-column-end: span 0;
+    }
+
+    .post-box {
+        margin-bottom: 40px;
+    }
+
+    .post-box .post-title {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 992px) {
-    .latest-news .row-title {
-        font-size: 25px;
-    }
+.hamburger-menu {
+    display: none;
+    padding-right: 20px;
+    border-radius: 30px;
+    /* Hide hamburger menu by default */
 }
 
 @media (max-width: 768px) {
-    .latest-news .row-title {
-        text-align: center;
-    }
-
-    .latest-news .main-btn-holder {
-        text-align: center;
+    .hamburger-menu {
+        display: block;
+        /* Display hamburger menu in mobile view */
+        cursor: pointer;
     }
 }
 
-@media (max-width: 480px) {
-    .latest-news {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
+/* Optional: Add styling for the hamburger icon */
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+}
 
-    .latest-news .row-title {
-        font-size: 25px;
-        text-align: left;
-        margin-bottom: 5px;
-    }
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
 
-    .latest-news .main-btn-holder {
-        display: none;
-    }
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust background color and opacity */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-icon {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

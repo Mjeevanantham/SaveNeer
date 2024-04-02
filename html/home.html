@@ -13,9 +13,17 @@
 </head>
 
 <body>
+
+    <div id="loader"></div>
+
     <nav class="navbar">
         <a href="https://saveneer.site" class="logo"><img src="../asset/icon/logo.png" alt="Logo"></a>
-        <ul class="menu">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
             <li><a href="#news-container">Latest News</a></li>
             <!-- <li><a href="#">HOME</a></li> -->
             <li><a href="./quiz.html">Facts & Games</a></li>
@@ -171,6 +179,12 @@
 
 
     <script src="../js/home.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+            document.querySelector('.hamburger-menu').classList.toggle('active');
+        }
+    </script>
 
 </body>
 
