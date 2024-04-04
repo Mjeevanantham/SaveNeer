@@ -24,6 +24,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: auto;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -51,7 +52,8 @@ body {
 }
 
 .info_box {
-    width: 540px;
+    width: auto;
+    max-width: 540px;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -68,7 +70,7 @@ body {
     align-items: center;
     padding: 0 30px;
     border-radius: 5px 5px 0 0;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -110,7 +112,8 @@ body {
 }
 
 .quiz_box {
-    width: 550px;
+    width: auto;
+    max-width: 550px;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
