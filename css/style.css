@@ -3,11 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  cursor: url('../asset/icon/cursor.png'), auto !important;
 }
 
 
 body {
+  cursor: url('../asset/icon/cursor.png'), auto !important;
   overflow-y: hidden;
   background-color: #3494e4;
   /* Adjust background color as needed */

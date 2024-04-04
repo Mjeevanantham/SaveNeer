@@ -173,17 +173,39 @@
 
 
         </main>
-        <button id="show-more-btn">Show More</button>
+        <button id="show-more-btn" onclick="InformUser()">Show More</button>
     </div>
 
 
 
     <script src="../js/home.js"></script>
     <script>
+        function InformUser() {
+            // Prompt the user for their email ID
+            var userInput = prompt("Currently Working In the News page... Leave your email ID, we will inform you after it is done!!");
+            if (userInput) {
+                // Store the user input in localStorage
+                localStorage.setItem("userEmail", userInput);
+                // Set the 'informed' flag to true
+                localStorage.setItem("informed", true);
+                // Hide the button
+                document.getElementById('show-more-btn').style.display = 'none';
+            } else {
+                // If user cancels the prompt, show the previously stored email (if any)
+                alert("Your email: " + localStorage.getItem("userEmail"));
+            }
+            if (localStorage.getItem("informed") === "true") {
+                document.getElementById('show-more-btn').style.display = 'none';
+            }
+            // Check if user has been informed already, and hide the button if so
+        }
+
+
         function toggleMenu() {
             document.querySelector('.menu').classList.toggle('active');
             document.querySelector('.hamburger-menu').classList.toggle('active');
         }
+
     </script>
 
 </body>

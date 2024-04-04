@@ -32,10 +32,11 @@ body {
 }
 
 .home {
-    position: absolute;
+    position: fixed;
     top: 5%;
     right: 5%;
     text-align: center;
+    z-index: 99;
     max-width: 90px;
     height: 40px;
     width: 100%;
@@ -415,8 +416,10 @@ span {
 
 
 @media screen and (max-width: 768px) {
+
     .card {
         max-width: 100%;
+        margin-top: 20px;
         /* Adjust max-width for smaller screens */
     }
 
