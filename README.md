@@ -27,3 +27,6 @@ If you encounter any issues or have questions about saveneer.site, please don't 
 
 License
 This project is licensed under the MIT License.
+
+
+FYI: This project is run by a client who's currently mastering the art of 5th grade, and oh, by the way, she's also my niece. So, yeah, no pressure!
